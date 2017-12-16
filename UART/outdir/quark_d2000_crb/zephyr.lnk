@@ -1,0 +1,15 @@
+-nostartfiles -nodefaultlibs -nostdlib -static -Wl,-X -Wl,-N -Wl,--gc-sections -Wl,--build-id=none
+-Wl,-Map=zephyr.map
+-L ./include/generated
+-u _OffsetAbsSyms -u _ConfigAbsSyms
+-e __start
+-Wl,--start-group
+-Wl,--whole-archive
+
+ src/built-in.o
+libzephyr.a
+-Wl,--no-whole-archive
+kernel/lib.a
+./arch/x86/core/offsets/offsets.o
+-Wl,--end-group
+-L /opt/intel/issm_2016.2.085/tools/compiler/gcc-ia/5.2.1/lib/gcc/i586-intel-elfiamcu/5.2.1 -L /opt/intel/issm_2016.2.085/tools/compiler/gcc-ia/5.2.1/i586-intel-elfiamcu/lib  -lgcc

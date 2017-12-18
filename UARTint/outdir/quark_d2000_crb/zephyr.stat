@@ -1,0 +1,59 @@
+ELF ヘッダ:
+  マジック:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  クラス:                            ELF32
+  データ:                            2 の補数、リトルエンディアン
+  バージョン:                        1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI バージョン:                    0
+  型:                                EXEC (実行可能ファイル)
+  マシン:                            Intel MCU
+  バージョン:                        0x1
+  エントリポイントアドレス:               0x180000
+  プログラムの開始ヘッダ:          52 (バイト)
+  セクションヘッダ始点:          252224 (バイト)
+  フラグ:                            0x0
+  このヘッダのサイズ:                52 (バイト)
+  プログラムヘッダサイズ:            32 (バイト)
+  プログラムヘッダ数:                3
+  セクションヘッダ:                  40 (バイト)
+  セクションヘッダサイズ:            20
+  セクションヘッダ文字列表索引:      17
+
+セクションヘッダ:
+  [番] 名前              タイプ          アドレス Off    サイズ ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] text              PROGBITS        00180000 0000a0 002ccb 00  AX  0   0 16
+  [ 2] devconfig         PROGBITS        00182ccc 002d6c 00006c 00  WA  0   0  4
+  [ 3] rodata            PROGBITS        00182d40 002de0 000988 00  WA  0   0 32
+  [ 4] datas             PROGBITS        00280000 003768 00002c 00  WA  0   0  4
+  [ 5] initlevel         PROGBITS        0028002c 003794 00006c 00  WA  0   0  4
+  [ 6] bss               NOBITS          002800a0 003800 000384 00  WA  0   0 32
+  [ 7] noinit            NOBITS          00280424 003800 000400 00  WA  0   0  4
+  [ 8] .comment          PROGBITS        00000000 003800 00006e 01  MS  0   0  1
+  [ 9] .debug_aranges    PROGBITS        00000000 003870 000e98 00      0   0  8
+  [10] .debug_info       PROGBITS        00000000 004708 015fa9 00      0   0  1
+  [11] .debug_abbrev     PROGBITS        00000000 01a6b1 005c8f 00      0   0  1
+  [12] .debug_line       PROGBITS        00000000 020340 00791e 00      0   0  1
+  [13] .debug_frame      PROGBITS        00000000 027c60 00247c 00      0   0  4
+  [14] .debug_str        PROGBITS        00000000 02a0dc 005483 01  MS  0   0  1
+  [15] .debug_loc        PROGBITS        00000000 02f55f 008cc9 00      0   0  1
+  [16] .debug_ranges     PROGBITS        00000000 038228 000ce0 00      0   0  8
+  [17] .shstrtab         STRTAB          00000000 03d885 0000bb 00      0   0  1
+  [18] .symtab           SYMTAB          00000000 038f08 002200 10     19 187  4
+  [19] .strtab           STRTAB          00000000 03b108 00277d 00      0   0  1
+フラグのキー:
+  W (write), A (alloc), X (実行), M (merge), S (文字列)
+  I (情報), L (リンク順), G (グループ), T (TLS), E (排他), x (不明)
+  O (追加の OS 処理が必要) o (OS 固有), p (プロセッサ固有)
+
+プログラムヘッダ:
+  タイプ       オフセット 仮想Addr   物理Addr   FileSiz MemSiz  Flg Align
+  LOAD           0x0000a0 0x00180000 0x00180000 0x036c8 0x036c8 RWE 0x20
+  LOAD           0x003768 0x00280000 0x001836c8 0x00098 0x00098 RW  0x4
+  LOAD           0x003800 0x002800a0 0x002800a0 0x00000 0x00784 RW  0x20
+
+ セグメントマッピングへのセクション:
+  セグメントセクション...
+   00     text devconfig rodata 
+   01     datas initlevel 
+   02     bss noinit 

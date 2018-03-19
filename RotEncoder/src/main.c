@@ -102,7 +102,7 @@ void rotB_Trig(struct device *gpiob, struct gpio_callback *cb,
 	}
 	else
 	{
-		if(old_B == 1)
+		if(old_A == 1)
 		{
 			count++;
 		}
